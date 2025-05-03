@@ -43,6 +43,7 @@ describe("Test to check different POST request types", () => {
     }).then((response) => {
       expect(response.body.per_page).to.equal(6);
       expect(response.body.data).to.have.length(6);
+      expect(response.body.data[2]).to.have.property('first_name','Tobias');
     });
   });
 });
